@@ -51,3 +51,19 @@ ORDER: Base + Typography > Generar Layout + Grid > Page Layout > Components
   border-top: 0;
   border-bottom: 0;
 }
+
+// border gradient Mixin
+// $dir = Direction of gradient
+// $from = Starting color
+// $to = Ending color
+// $width = Border width/thickness
+
+@mixin border-gradient($dir, $from, $to, $width) {
+  border-left: $width solid $from;
+  border-right: $width solid $to;
+  background-image: ($dir, $from, $to), -webkit-linear-gradient($dir, $from, $to);
+  background-size: 100% $width;
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
