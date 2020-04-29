@@ -14,17 +14,21 @@ const Contact = () => {
         <Title title="Contact" />
         <Fade bottom duration={1000} delay={800} distance="30px">
           <div className="contact-wrapper">
-            <p className="contact-wrapper__text">
-              {cta || 'Would you like to work with me? Awesome!'}
-            </p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn cta-btn--resume"
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
-            >
-              {btn || "Let's Talk"}
-            </a>
+            <p className="contact-wrapper__text">{cta}</p>
+            <form action="https://formspree.io/xyywpnww" method="POST">
+              <label>
+                Your email:
+                <input type="text" name="_replyto" required />
+              </label>
+              <label>
+                Your message:
+                <textarea name="message" required></textarea>
+              </label>
+
+              <button className="cta-btn cta-btn--resume" type="submit">
+                {btn}
+              </button>
+            </form>
           </div>
         </Fade>
       </Container>

@@ -22,6 +22,23 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: $default-font-size;
+}
+
+button,
+button:link,
+button:hover,
+button:visited,
+button:active {
+  text-decoration: none;
+}
+
+button:hover {
+  transition: all 0.3s ease-in-out;
+}
+
 .section-title {
   margin: 0px;
   margin-bottom: 4.5rem;

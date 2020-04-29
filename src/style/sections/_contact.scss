@@ -24,12 +24,30 @@
     }
 
     &__text,
-    a {
+    a,
+    form,
+    button {
       font-size: 2.4rem;
 
       // Responsive for contact text
       @include respond(phone) {
         font-size: 2rem;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      label {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button {
+        margin: 2rem 0;
+        background-color: transparent;
       }
     }
   }
